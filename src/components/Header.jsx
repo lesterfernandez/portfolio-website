@@ -3,7 +3,6 @@ import { Button } from "@chakra-ui/button";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { Divider, Stack, Text, VStack } from "@chakra-ui/layout";
-import { motion } from "framer-motion";
 const Header = () => {
   return (
     <Stack
@@ -41,7 +40,6 @@ const Header = () => {
           I create beautiful applications and have fun while I'm at it
         </Text>
         <Button
-          as={motion.button}
           colorScheme="blue"
           className="primary-btn"
           rightIcon={
