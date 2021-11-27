@@ -1,6 +1,6 @@
 import { Button } from "@chakra-ui/button";
 import { Image } from "@chakra-ui/image";
-import { Heading, Wrap } from "@chakra-ui/layout";
+import { Heading, ListItem, UnorderedList, Wrap } from "@chakra-ui/layout";
 import {
   Modal,
   ModalBody,
@@ -13,7 +13,14 @@ import {
 import { Tag } from "@chakra-ui/tag";
 import Article from "./Article";
 
-const ProjectInfo = ({ isOpen, onClose, title, previewSrc, tags }) => {
+const ProjectInfo = ({
+  isOpen,
+  onClose,
+  title,
+  previewSrc,
+  tags,
+  architecture,
+}) => {
   return (
     <>
       <Modal
@@ -45,7 +52,11 @@ const ProjectInfo = ({ isOpen, onClose, title, previewSrc, tags }) => {
             </Article>
             <Article>
               <Heading size="lg">Architecture</Heading>
-              Hello World
+              <UnorderedList>
+                {architecture.map(item => (
+                  <ListItem key={title + "-" + item}></ListItem>
+                ))}
+              </UnorderedList>
             </Article>
           </ModalBody>
           <ModalFooter>

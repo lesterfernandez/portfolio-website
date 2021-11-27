@@ -8,15 +8,8 @@ import Project from "../Project";
 const Projects = () => {
   return (
     <VStack spacing="3rem" py="4rem">
-      <Heading textAlign="center">My Works</Heading>
+      <Heading textAlign="center">Things I've Done</Heading>
       <Wrap justify="center" spacing="1.4rem">
-        <Project
-          src={cubedUpIconPic}
-          previewSrc={cubedUpPreview}
-          label="IOS Mobile Game"
-          title="Cubed Up"
-          tags={["C#", "Unity", "Playfab PaaS", "OOP"]}
-        />
         <Project
           src={twitterCloneLanding}
           previewSrc={twitterCloneFeedPic}
@@ -29,10 +22,36 @@ const Projects = () => {
             "PassportJS",
             "Google OAuth 2.0",
             "ReactJS",
-            "JavaScript",
             "React Router",
             "React Query",
+            "JavaScript",
           ]}
+          architecture={{
+            "Front End": "hi",
+            "Back End": "hi",
+            Authentication: "hi",
+            Code: "hi",
+          }}
+        />
+        <Project
+          src={cubedUpIconPic}
+          previewSrc={cubedUpPreview}
+          label="IOS Mobile Game"
+          title="Cubed Up"
+          tags={[
+            "C#",
+            "Unity",
+            "Mirror Multiplayer Framework",
+            "Playfab PaaS",
+            "OOP",
+          ]}
+          description="When players first open the app they are greeted with a sign up screen. Their account is saved in a Microsoft PlayFab back-end. The game is made with C# and Unity. The code is written in an OOP paradigm. Players can play multiplayer through a dedicated C# server written using the Mirror framework."
+          architecture={{
+            Authentication: "hi",
+            Multiplayer: "hi",
+            Leaderboard: "hi",
+            Code: "hi",
+          }}
         />
       </Wrap>
     </VStack>

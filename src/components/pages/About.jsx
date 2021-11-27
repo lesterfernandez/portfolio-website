@@ -15,15 +15,15 @@ const About = () => {
           Technologies I Know
           <CheckCircleIcon color="green.200" mx="0.4rem" pb="2px" />
         </Heading>
-        <Wrap spacing="0.5rem" maxW="70%">
+        <Wrap spacing="0.5rem" maxW="70%" pt="0.4rem">
           <Tag>JavaScript</Tag>
-          <Tag>Java</Tag>
-          <Tag>C#</Tag>
           <Tag>Git</Tag>
           <Tag>React</Tag>
           <Tag>NodeJS</Tag>
           <Tag>Express</Tag>
           <Tag>PostgreSQL</Tag>
+          <Tag>Java</Tag>
+          <Tag>C#</Tag>
         </Wrap>
       </Article>
 

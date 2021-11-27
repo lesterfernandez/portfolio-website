@@ -3,7 +3,7 @@ import React from "react";
 import ProjectInfo from "./ProjectInfo";
 import ProjectThumbnail from "./ProjectThumbnail";
 
-const Project = ({ src, previewSrc, label, title, tags }) => {
+const Project = ({ src, previewSrc, label, title, tags, architecture }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -20,6 +20,7 @@ const Project = ({ src, previewSrc, label, title, tags }) => {
         title={title}
         previewSrc={previewSrc}
         tags={tags}
+        architecture={architecture}
       />
     </>
   );
