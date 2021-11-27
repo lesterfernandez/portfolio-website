@@ -1,5 +1,6 @@
 import { Container } from "@chakra-ui/layout";
 import { motion } from "framer-motion";
+import { Outlet } from "react-router";
 
 const MotionContainer = motion(Container);
 
@@ -9,7 +10,7 @@ const variants = {
   exit: { opacity: 0, x: -100 },
 };
 
-const Section = ({ children }) => {
+const Section = () => {
   return (
     <MotionContainer
       maxW="container.sm"
@@ -21,7 +22,7 @@ const Section = ({ children }) => {
       sx={{ position: "relative", overflow: "hidden" }}
       transition={{ duration: 0.4, type: "easeInOut" }}
     >
-      {children}
+      <Outlet />
     </MotionContainer>
   );
 };

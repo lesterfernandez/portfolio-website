@@ -3,11 +3,10 @@ import { Heading, Spacer, Text, Wrap } from "@chakra-ui/layout";
 import { Tag } from "@chakra-ui/tag";
 import Article from "../Article";
 import Header from "../Header";
-import Section from "../Section";
 
 const About = () => {
   return (
-    <Section>
+    <>
       <Header />
       <Spacer />
 
@@ -41,7 +40,7 @@ const About = () => {
           I am currently majoring in Computer Science at Miami-Dade College.
         </Text>
       </Article>
-    </Section>
+    </>
   );
 };
 
