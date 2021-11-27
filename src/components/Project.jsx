@@ -1,102 +1,27 @@
-import { Text, WrapItem } from "@chakra-ui/layout";
-import { useMediaQuery } from "@chakra-ui/media-query";
-import { chakra } from "@chakra-ui/system";
-import { motion } from "framer-motion";
-import { useState } from "react";
-import { useNavigate } from "react-router";
+import { useDisclosure } from "@chakra-ui/hooks";
+import React from "react";
+import ProjectInfo from "./ProjectInfo";
+import ProjectThumbnail from "./ProjectThumbnail";
 
-const MotionBox = chakra(motion.div);
-
-const variants = {
-  topInit: {
-    y: "-100%",
-    opacity: 0,
-    transition: {
-      type: "easeInOut",
-    },
-  },
-  topAnim: {
-    y: "0%",
-    opacity: 1,
-    transition: {
-      type: "easeInOut",
-    },
-  },
-  bottomInit: {
-    y: "100%",
-    opacity: 0,
-    transition: {
-      type: "easeInOut",
-    },
-  },
-  bottomAnim: {
-    y: "-100%",
-    opacity: 1,
-    transition: {
-      type: "easeInOut",
-    },
-  },
-};
-
-const Project = ({ src, previewSrc, label }) => {
-  const [isMediumWidth] = useMediaQuery("(max-width: 1200px)");
-  const [isHover, setHover] = useState(isMediumWidth ? true : false);
-  const navigate = useNavigate();
+const Project = ({ src, previewSrc, label, title, tags }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <WrapItem>
-      <MotionBox
-        bg={`no-repeat center url(${src})`}
-        bgSize="cover"
-        w="200px"
-        h="200px"
-        borderRadius="lg"
-        overflow="hidden"
-        onHoverStart={() => {
-          if (isMediumWidth) return;
-          setHover(true);
-        }}
-        onHoverEnd={() => {
-          if (isMediumWidth) return;
-          setHover(false);
-        }}
-        cursor="pointer"
-        zIndex="3"
-        onClick={() => {
-          navigate("/");
-        }}
-      >
-        <MotionBox
-          textAlign="center"
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          w="100%"
-          h="100%"
-          variants={variants}
-          initial={isMediumWidth ? "topAnim" : "topInit"}
-          animate={isHover ? "topAnim" : "topInit"}
-          bg={`no-repeat center url(${previewSrc})`}
-          bgSize="cover"
-          zIndex="2"
-        />
+    <>
+      <ProjectThumbnail
+        src={src}
+        previewSrc={previewSrc}
+        onOpen={onOpen}
+        label={label}
+      />
 
-        <MotionBox
-          textAlign="center"
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          w="100%"
-          h="60px"
-          variants={variants}
-          initial={isMediumWidth ? "bottomAnim" : "bottomInit"}
-          animate={isHover ? "bottomAnim" : "bottomInit"}
-          bgColor="#2227"
-          zIndex="2"
-        >
-          <Text color="white">{label}</Text>
-        </MotionBox>
-      </MotionBox>
-    </WrapItem>
+      <ProjectInfo
+        isOpen={isOpen}
+        onClose={onClose}
+        title={title}
+        previewSrc={previewSrc}
+        tags={tags}
+      />
+    </>
   );
 };
 

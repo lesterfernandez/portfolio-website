@@ -16,11 +16,25 @@ const Projects = () => {
             src={cubedUpIconPic}
             previewSrc={cubedUpPreview}
             label="IOS Mobile Game"
+            title="Cubed Up"
+            tags={["C#", "Unity", "Playfab PaaS", "OOP"]}
           />
           <Project
             src={twitterCloneLanding}
             previewSrc={twitterCloneFeedPic}
             label="Full Stack Micro Blog"
+            title="Twitter Clone"
+            tags={[
+              "NodeJS",
+              "PostgreSQL",
+              "ExpressJS",
+              "PassportJS",
+              "Google OAuth 2.0",
+              "ReactJS",
+              "JavaScript",
+              "React Router",
+              "React Query",
+            ]}
           />
         </Wrap>
       </VStack>
