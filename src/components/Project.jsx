@@ -1,8 +1,9 @@
-import { WrapItem } from "@chakra-ui/layout";
+import { Text, WrapItem } from "@chakra-ui/layout";
 import { useMediaQuery } from "@chakra-ui/media-query";
 import { chakra } from "@chakra-ui/system";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 const MotionBox = chakra(motion.div);
 
@@ -29,7 +30,7 @@ const variants = {
     },
   },
   bottomAnim: {
-    y: "-30%",
+    y: "-100%",
     opacity: 1,
     transition: {
       type: "easeInOut",
@@ -37,9 +38,10 @@ const variants = {
   },
 };
 
-const Project = ({ src, previewSrc }) => {
+const Project = ({ src, previewSrc, label }) => {
   const [isMediumWidth] = useMediaQuery("(max-width: 1200px)");
   const [isHover, setHover] = useState(isMediumWidth ? true : false);
+  const navigate = useNavigate();
   return (
     <WrapItem>
       <MotionBox
@@ -60,7 +62,7 @@ const Project = ({ src, previewSrc }) => {
         cursor="pointer"
         zIndex="3"
         onClick={() => {
-          console.log("clicked project");
+          navigate("/");
         }}
       >
         <MotionBox
@@ -84,13 +86,15 @@ const Project = ({ src, previewSrc }) => {
           justifyContent="center"
           alignItems="center"
           w="100%"
-          h="100%"
+          h="60px"
           variants={variants}
           initial={isMediumWidth ? "bottomAnim" : "bottomInit"}
           animate={isHover ? "bottomAnim" : "bottomInit"}
           bgColor="#2227"
           zIndex="2"
-        />
+        >
+          <Text color="white">{label}</Text>
+        </MotionBox>
       </MotionBox>
     </WrapItem>
   );

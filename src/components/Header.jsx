@@ -3,6 +3,7 @@ import { Button } from "@chakra-ui/button";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { Divider, Stack, Text, VStack } from "@chakra-ui/layout";
+import { Link } from "react-router-dom";
 import profilePic from "../assets/profilepicgithub.jpeg";
 
 const Header = () => {
@@ -42,6 +43,8 @@ const Header = () => {
           I create beautiful applications and have fun while I'm at it
         </Text>
         <Button
+          as={Link}
+          to="/projects"
           colorScheme="blue"
           className="primary-btn"
           rightIcon={
