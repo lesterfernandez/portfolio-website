@@ -1,6 +1,7 @@
 import { Button } from "@chakra-ui/button";
+import { LinkIcon } from "@chakra-ui/icons";
 import { Image } from "@chakra-ui/image";
-import { Heading, Wrap } from "@chakra-ui/layout";
+import { Heading, HStack, Link, Text, Wrap } from "@chakra-ui/layout";
 import {
   Modal,
   ModalBody,
@@ -42,7 +43,11 @@ const ProjectInfo = ({
             mx="auto"
             rounded="lg"
           />
-          <Article my="0" m="2rem 0 3rem">
+          <HStack justify="center" py="1rem">
+            <Text>Live Demo</Text>
+            <LinkIcon /> <Link textDecoration="underline">example.com</Link>
+          </HStack>
+          <Article my="0" m="1.2rem 0 3rem">
             <Heading size="lg">Technologies Used</Heading>
             <Wrap>
               {tags.map((tag, idx) => (
