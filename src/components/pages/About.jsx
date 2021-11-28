@@ -19,6 +19,7 @@ const About = () => {
           <Tag>JavaScript</Tag>
           <Tag>Git</Tag>
           <Tag>React</Tag>
+          <Tag>REST</Tag>
           <Tag>NodeJS</Tag>
           <Tag>Express</Tag>
           <Tag>PostgreSQL</Tag>

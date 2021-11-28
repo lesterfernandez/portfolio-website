@@ -10,12 +10,7 @@ const Views = () => {
   return (
     <AnimatePresence exitBeforeEnter>
       <Routes location={location} key={location.pathname}>
-        <Route
-          location={location}
-          key={location.pathname}
-          path="/"
-          element={<Section />}
-        >
+        <Route path="/" element={<Section />}>
           <Route index element={<About key="home" />} />
           <Route path="/projects" element={<Projects key="projects" />} />
           <Route path="/contactme" element={<ContactMe key="contactme" />} />

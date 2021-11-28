@@ -27,10 +27,16 @@ const Projects = () => {
             "JavaScript",
           ]}
           architecture={{
-            "Front End": "hi",
-            "Back End": "hi",
-            Authentication: "hi",
-            Code: "hi",
+            "Front End":
+              "React is used along with modern features such as React Context and Hooks. Client-Side Routing is done with React Router v6.",
+            "Data Caching":
+              "Data is frequently being requested from the back-end, so in order to keep a good user experience server-side data is cached on the client. This is done with React Query and results in users only seeing a loading screen on the first request.",
+            "Back End":
+              "NodeJS is used as the server-side language, along with ExpressJS as the back-end framework. Routing is used to keep the files small and maintainable.",
+            Authentication:
+              "Users are authenticated through Google OAuth 2.0. PassportJS helps reduce redundancy in the code. Express-session stores user sessions and sets a cookie on the client's browser.",
+            Database:
+              "All user accounts are stored and managed in a PostgreSQL database. Relations are used to tie user accounts to their posts.",
           }}
         />
         <Project
@@ -45,12 +51,14 @@ const Projects = () => {
             "Playfab PaaS",
             "OOP",
           ]}
-          description="When players first open the app they are greeted with a sign up screen. Their account is saved in a Microsoft PlayFab back-end. The game is made with C# and Unity. The code is written in an OOP paradigm. Players can play multiplayer through a dedicated C# server written using the Mirror framework."
           architecture={{
-            Authentication: "hi",
-            Multiplayer: "hi",
-            Leaderboard: "hi",
-            Code: "hi",
+            Authentication:
+              "Players can sign up or log into previous accounts. The PlayFab API is used to implement user Authentication.",
+            Multiplayer:
+              "I wrote custom dedicated C# servers for players to connect to. The servers are written using the Mirror framework. They are containerized with Docker and hosted on Microsoft PlayFab.",
+            "Global Leaderboard":
+              "Using PlayFab's API I implemented a leaderboard where players can see where they rank and if they made it to the top 10 players world-wide.",
+            Code: "This app was coded in C# using the Unity Framework. It implements an Object-Oriented programming paradigm. This results in the codebase being maintable and easy to expand upon.",
           }}
         />
       </Wrap>
