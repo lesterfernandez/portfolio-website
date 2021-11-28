@@ -1,5 +1,5 @@
 import { Heading, List, ListItem } from "@chakra-ui/layout";
-import Article from "./Article";
+import Article from "../../Article";
 
 const ProjectArchitecture = ({ architecture, title }) => {
   return (

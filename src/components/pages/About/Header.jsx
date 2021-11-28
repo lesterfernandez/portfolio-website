@@ -4,7 +4,7 @@ import { useColorModeValue } from "@chakra-ui/color-mode";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { Divider, Stack, Text, VStack } from "@chakra-ui/layout";
 import { Link } from "react-router-dom";
-import profilePic from "../assets/profilepicgithub.jpeg";
+import profilePic from "../../../assets/profilepicgithub.jpeg";
 
 const Header = () => {
   return (

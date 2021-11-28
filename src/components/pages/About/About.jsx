@@ -1,8 +1,8 @@
 import { CheckCircleIcon } from "@chakra-ui/icons";
 import { Heading, Spacer, Text, Wrap } from "@chakra-ui/layout";
 import { Tag } from "@chakra-ui/tag";
-import Article from "../Article";
-import Header from "../Header";
+import Article from "../../Article";
+import Header from "./Header";
 
 const About = () => {
   return (

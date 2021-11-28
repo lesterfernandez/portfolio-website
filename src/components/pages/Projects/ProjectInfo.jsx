@@ -11,7 +11,7 @@ import {
   ModalOverlay,
 } from "@chakra-ui/modal";
 import { Tag } from "@chakra-ui/tag";
-import Article from "./Article";
+import Article from "../../Article";
 import ProjectArchitecture from "./ProjectArchitecture";
 
 const ProjectInfo = ({

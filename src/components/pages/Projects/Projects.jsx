@@ -1,9 +1,9 @@
 import { Heading, VStack, Wrap } from "@chakra-ui/layout";
-import cubedUpIconPic from "../../assets/cubedupicon.png";
-import cubedUpPreview from "../../assets/ipadscreenshot.png";
-import twitterCloneFeedPic from "../../assets/twitterclonefeed.png";
-import twitterCloneLanding from "../../assets/twitterclonelanding.png";
-import Project from "../Project";
+import cubedUpIconPic from "../../../assets/cubedupicon.png";
+import cubedUpPreview from "../../../assets/ipadscreenshot.png";
+import twitterCloneFeedPic from "../../../assets/twitterclonefeed.png";
+import twitterCloneLanding from "../../../assets/twitterclonelanding.png";
+import Project from "./Project";
 
 const Projects = () => {
   return (

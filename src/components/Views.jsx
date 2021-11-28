@@ -1,8 +1,8 @@
 import { AnimatePresence } from "framer-motion";
 import { Route, Routes, useLocation } from "react-router";
-import About from "./pages/About";
-import ContactMe from "./pages/ContactMe";
-import Projects from "./pages/Projects";
+import About from "./pages/About/About";
+import ContactMe from "./pages/ContactMe/ContactMe";
+import Projects from "./pages/Projects/Projects";
 import Section from "./Section";
 
 const Views = () => {
