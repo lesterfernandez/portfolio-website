@@ -15,6 +15,8 @@ const Projects = () => {
           previewSrc={twitterCloneFeedPic}
           label="Full Stack Micro Blog"
           title="Twitter Clone"
+          demoText="Live Demo"
+          demoLink="https://bit.ly/312isBR"
           tags={[
             "NodeJS",
             "PostgreSQL",
@@ -44,6 +46,8 @@ const Projects = () => {
           previewSrc={cubedUpPreview}
           label="IOS Mobile Game"
           title="Cubed Up"
+          demoText="App Listing"
+          demoLink="https://apple.co/3xwOm58"
           tags={[
             "C#",
             "Unity",
