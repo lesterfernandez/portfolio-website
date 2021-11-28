@@ -28,7 +28,7 @@ const ContactMe = () => {
               .max(1200, "Invalid body"),
           })}
           onSubmit={(values, actions) => {
-            const url = `mailto:lester.inquiry@example.com?subject=${encodeURIComponent(
+            const url = `mailto:lester.inquiry@gmail.com?subject=${encodeURIComponent(
               values.subject
             )}&body=${encodeURIComponent(values.body)}`;
             actions.resetForm();
