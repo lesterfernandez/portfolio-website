@@ -6,3 +6,5 @@
 - React Router v6
 - Chakra UI
 - Framer Motion
+- Formik
+- React Icons
