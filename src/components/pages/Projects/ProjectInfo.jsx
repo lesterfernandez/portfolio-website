@@ -47,7 +47,10 @@ const ProjectInfo = ({
           />
           <HStack justify="center" py="1rem">
             <Text>{demoText}</Text>
-            <LinkIcon /> <Link textDecoration="underline">{demoLink}</Link>
+            <LinkIcon />{" "}
+            <Link textDecoration="underline" href={demoLink} target="_blank">
+              {demoLink}
+            </Link>
           </HStack>
           <Article my="0" m="1.2rem 0 3rem">
             <Heading size="lg">Technologies Used</Heading>
