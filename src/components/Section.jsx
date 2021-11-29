@@ -12,7 +12,7 @@ const variants = {
 };
 
 const Section = () => {
-  const isLargeScreen = useMediaQuery("(min-width: 800px)")[0];
+  const [isLargeScreen] = useMediaQuery("(min-width: 800px)");
   if (isLargeScreen)
     return (
       <MotionContainer
