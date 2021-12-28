@@ -43,6 +43,7 @@ const ProjectThumbnail = ({ label, onOpen, src, previewSrc }) => {
     <WrapItem onClick={() => onOpen()}>
       <MotionBox
         bg={`no-repeat center url(${src})`}
+        outline="4px solid gray"
         bgSize="cover"
         w="200px"
         h="200px"

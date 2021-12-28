@@ -3,6 +3,8 @@ import cubedUpIconPic from "../../../assets/cubedupicon.png";
 import cubedUpPreview from "../../../assets/ipadscreenshot.png";
 import twitterCloneFeedPic from "../../../assets/twitterclonefeed.png";
 import twitterCloneLanding from "../../../assets/twitterclonelanding.png";
+import whatsappConvo from "../../../assets/whatsappconvo.png";
+import whatsappLogin from "../../../assets/whatsapplogin.png";
 import Project from "./Project";
 
 const Projects = () => {
@@ -10,6 +12,36 @@ const Projects = () => {
     <VStack spacing="3rem" py="4rem">
       <Heading textAlign="center">Things I've Done</Heading>
       <Wrap justify="center" spacing="1.4rem">
+        <Project
+          src={whatsappLogin}
+          previewSrc={whatsappConvo}
+          label="Real-Time Messenger"
+          title="Whatsapp Clone"
+          demoText="Live Demo"
+          demoLink="https://lester-whatsapp.netlify.app"
+          tags={[
+            "NodeJS",
+            "React",
+            "SocketIO",
+            "ExpressJS",
+            "Redis",
+            "PostgreSQL",
+            "Dokku",
+            "Digital Ocean",
+            "Lets Encrypt",
+          ]}
+          architecture={{
+            "Front End":
+              "The front-end uses React.js along with React Router to implement client-side routing. It uses Formik and Yup to do client-side form validation. Front-end authorization is done with the help of the React Context api. However, because front-end code is vulnerable, every user action is verified on the back-end.",
+            "Back End":
+              "Written in Node.js, the back-end for this application uses Socket.io for real-time communication and express-session for server-side user sessions. User submitted forms are validated through Yup. The MVC paradigm is implemented in order follow project management best practices.",
+            Database:
+              "Redis is used for rate limiting and to store conversations. While user accounts are stored in PostgreSQL.",
+            "Web Hosting":
+              "While the front-end is hosted on Netlify, the server and databases are hosted on Digital Ocean. The back-end is configured with a Lets Encrypt HTTPS certificate tied to the NGinx reverse proxy. The Dokku PaaS is used for continuous deployment.",
+          }}
+        />
+
         <Project
           src={twitterCloneLanding}
           previewSrc={twitterCloneFeedPic}
@@ -41,6 +73,7 @@ const Projects = () => {
               "All user accounts are stored and managed in a PostgreSQL database. Relations are used to tie user accounts to their posts.",
           }}
         />
+
         <Project
           src={cubedUpIconPic}
           previewSrc={cubedUpPreview}
